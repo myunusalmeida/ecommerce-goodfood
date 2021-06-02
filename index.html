@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Food Order | Almeida Space Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body id="body">
+
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span class="nav-icon">
+                <i class="bx bx-menu"></i>
+            </span>
+            <img src="./images/logo.png" alt="" class="nav-logo">
+            <div class="cart-btn" onClick="showCart()">
+                <span class="nav-icon">
+                    <i class="bx bxs-cart"></i>
+                </span>
+                <div class="cart-items">3</div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="categories">
+        <div class="categories-center">
+            <a class="category-item active" onClick="filterSelection('all')">
+                <img src="./images/category-all.png" alt="category icon" class="category-image">
+                <p class="category-title">All</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('hamburger')">
+                <img src="./images/category-hamburger.png" alt="category icon" class="category-image">
+                <p class="category-title">Hamburger</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('pizza')">
+                <img src="./images/category-pizza.png" alt="category icon" class="category-image">
+                <p class="category-title">Pizza</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('salad')">
+                <img src="./images/category-salad.png" alt="category icon" class="category-image">
+                <p class="category-title">Healthy</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('vegan')">
+                <img src="./images/category-fruits.png" alt="category icon" class="category-image">
+                <p class="category-title">Vegan</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('spaghetti')">
+                <img src="./images/category-spaghetti.png" alt="category icon" class="category-image">
+                <p class="category-title">Spaghetti</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('salad')">
+                <img src="./images/category-salad.png" alt="category icon" class="category-image">
+                <p class="category-title">Salad</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('sushi')">
+                <img src="./images/category-sushi.png" alt="category icon" class="category-image">
+                <p class="category-title">Sushi</p>
+            </a>
+            <a class="category-item" onClick="filterSelection('drinks')">
+                <img src="./images/category-drinks.png" alt="category icon" class="category-image">
+                <p class="category-title">Drinks</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="section-title">
+            <h2>Popular Dishes</h2>
+        </div>
+        <div class="products-center">
+            <div class="product-items salad">
+                <div class="img-container">
+                    <img src="./images/product-salad-1.jpeg" alt="Product">
+                    <div class="category">Salad</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Classic Caesar Salad</h3>
+                <p class="product-price">Rp. 74.000</p>
+            </div>
+            <div class="product-items pizza">
+                <div class="img-container">
+                    <img src="./images/product-pizza-1.jpeg" alt="Product">
+                    <div class="category">Pizza</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Pizza Mozarela Cheese</h3>
+                <p class="product-price">Rp. 180.000</p>
+            </div>
+            <div class="product-items meat">
+                <div class="img-container">
+                    <img src="./images/product-meat-1.jpeg" alt="Product">
+                    <div class="category">Meat</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Classic Beef Steak</h3>
+                <p class="product-price">Rp. 210.000</p>
+            </div>
+            <div class="product-items healthy">
+                <div class="img-container">
+                    <img src="./images/product-healthy-1.jpeg" alt="Product">
+                    <div class="category">Healthy</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Healthy Taco Salad</h3>
+                <p class="product-price">Rp. 100.000</p>
+            </div>
+
+            <div class="product-items meat">
+                <div class="img-container">
+                    <img src="./images/product-meat-2.jpeg" alt="Product">
+                    <div class="category">Meat</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Classic Cook Pot Roast</h3>
+                <p class="product-price">Rp. 220.000</p>
+            </div>
+            <div class="product-items salad">
+                <div class="img-container">
+                    <img src="./images/product-salad-2.jpeg" alt="Product">
+                    <div class="category">Salad</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Vegan Cobb Salad</h3>
+                <p class="product-price">Rp. 60.000</p>
+            </div>
+            <div class="product-items healthy">
+                <div class="img-container">
+                    <img src="./images/product-healthy-2.jpeg" alt="Product">
+                    <div class="category">Healthy</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Festive Fruit Salad</h3>
+                <p class="product-price">Rp. 80.000</p>
+            </div>
+            <div class="product-items spaghetti">
+                <div class="img-container">
+                    <img src="./images/product-spaghetti-1.jpeg" alt="Product">
+                    <div class="category">Spaghetti</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Spaghetti with Meat Sauce</h3>
+                <p class="product-price">Rp. 72.000</p>
+            </div>
+
+            <div class="product-items drinks">
+                <div class="img-container">
+                    <img src="./images/product-drink-1.jpeg" alt="Product">
+                    <div class="category">Drinks</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Mushroom Cocktail</h3>
+                <p class="product-price">Rp. 52.000</p>
+            </div>
+            <div class="product-items drinks">
+                <div class="img-container">
+                    <img src="./images/product-drink-2.jpeg" alt="Product">
+                    <div class="category">Drinks</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Chocolate Milshake</h3>
+                <p class="product-price">Rp. 30.000</p>
+            </div>
+            <div class="product-items pizza">
+                <div class="img-container">
+                    <img src="./images/product-pizza-2.jpeg" alt="Product">
+                    <div class="category">Pizza</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Super Supreme Pizza</h3>
+                <p class="product-price">Rp. 102.000</p>
+            </div>
+            <div class="product-items hamburger">
+                <div class="img-container">
+                    <img src="./images/product-hamburger-1.jpeg" alt="Product">
+                    <div class="category">Hamburger</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Le Pigeon Burger</h3>
+                <p class="product-price">Rp. 71.000</p>
+            </div>
+
+            <div class="product-items hamburger">
+                <div class="img-container">
+                    <img src="./images/product-hamburger-2.jpeg" alt="Product">
+                    <div class="category">Hamburger</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Buckhrorn Burger</h3>
+                <p class="product-price">Rp. 55.000</p>
+            </div>
+            <div class="product-items vegan">
+                <div class="img-container">
+                    <img src="./images/product-vegan-1.jpeg" alt="Product">
+                    <div class="category">Vegan</div>
+                    <button class="bag-btn">
+                        <i class="bx bxs-cart-add"></i>
+                    </button>
+                </div>
+                <h3 class="product-title">Sesame Soba Noodles</h3>
+                <p class="product-price">Rp. 81.000</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart" id="cart">
+        <div class="cart-header">
+            <div class="section-title">
+                <h2>My Order</h2>
+            </div>
+            <span class="close-cart" onclick="showCart()">
+                <i class="bx bx-x"></i>
+            </span>
+        </div>
+        <div class="cart-content">
+            <div class="cart-item">
+                <img src="./images/product-meat-1.jpeg" alt="product cart image" class="cart-image">
+                <div class="product-name">
+                    <h4>Classic Beef Steak</h4>
+                    <p>Rp. 210.000</p>
+                </div>
+                <div class="cart-amount">
+                    <span class="btn-amount"><i class="bx bx-plus"></i></span>
+                    <span class="item-amount">1</span>
+                    <span class="btn-amount"><i class="bx bx-minus"></i></span>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="./images/product-hamburger-2.jpeg" alt="product cart image" class="cart-image">
+                <div class="product-name">
+                    <h4>Buckhrorn Burger</h4>
+                    <p>Rp. 55.000</p>
+                </div>
+                <div class="cart-amount">
+                    <span class="btn-amount"><i class="bx bx-plus"></i></span>
+                    <span class="item-amount">1</span>
+                    <span class="btn-amount"><i class="bx bx-minus"></i></span>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="./images/product-salad-1.jpeg" alt="product cart image" class="cart-image">
+                <div class="product-name">
+                    <h4>Classic Caesar Salad</h4>
+                    <p>Rp. 74.000</p>
+                </div>
+                <div class="cart-amount">
+                    <span class="btn-amount"><i class="bx bx-plus"></i></span>
+                    <span class="item-amount">1</span>
+                    <span class="btn-amount"><i class="bx bx-minus"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <p>Total Amount :</p>
+                <h4>Rp. 309.000</h4>
+            </div>
+            <button class="btn-cart">Checkout</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="content">
+            <p class="copyright">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                @muhammadyunusalmeida. All rights reserved
+            </p>
+            <div class="socials">
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="bx bxl-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
